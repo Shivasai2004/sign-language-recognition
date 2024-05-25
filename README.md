@@ -1,100 +1,51 @@
-# Indian Sign Language Recognition
+# Sign Language Recognition (Indian)
 
-This repository contains a project for recognizing Indian Sign Language using deep learning techniques. The project includes various scripts and models to collect data, train the model, and deploy a real-time sign language recognition system.
+This repository contains code and models for recognizing Indian Sign Language (ISL) gestures using deep learning. The project includes various components, such as data collection, model training, real-time detection, and a Streamlit-based user interface.
 
 ## Table of Contents
+- Introduction
+- Project Structure
+- Getting Started
+- Data Collection
+- Model Training
+- Real-Time Detection
+- User Interface
+- Contributing
+- License
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Models](#models)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+## Introduction
+Sign language recognition is an important application that enables communication between hearing-impaired individuals and others. This project focuses on recognizing ISL gestures using deep learning techniques.
 
-## Installation
+## Project Structure
+The repository is organized as follows:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Shivasai2004/sign-language-recognition.git
-Change into the project directory:
-bash
-Copy code
-cd sign-language-recognition
-Install the required dependencies:
-bash
-Copy code
-pip install -r requirements.txt
-Usage
-Data Collection
-To collect data for training the model, use collectdata.py. This script captures images from your webcam and stores them in the appropriate folders.
+- `models/`: Contains pre-trained model files (HDF5 format) for gesture recognition.
+- `app.py`: A Streamlit-based web application for visualizing gesture recognition.
+- `collectadata.py`: Collects data by capturing images of signs from the camera and storing them in alphabet-specific folders (48x48 grayscale images).
+- `detect.py`: Performs real-time gesture detection using the trained models.
+- `model.ipynb`: Jupyter Notebook containing the deep learning model architecture and training process.
+- `split.py`: Splits the dataset into training and testing subsets.
 
-bash
-Copy code
-python collectdata.py
-Show the sign in front of the camera and press the corresponding alphabet key. The script will save the images in grayscale format (48x48 size) in the respective alphabet folder.
+## Getting Started
+1. Clone this repository: `git clone https://github.com/Shivasai2004/sign-language-recognition.git`
+2. Install the required dependencies: `pip install -r requirements.txt`
+3. Follow the instructions in each script to use the corresponding functionality.
 
-Train the Model
-The training process is documented in the model.ipynb notebook. Open this file in Jupyter Notebook to train your model.
+## Data Collection
+To collect data for training, run `collectadata.py`. Show the sign in front of the camera and press the corresponding alphabet key. The images will be saved in the appropriate alphabet folder.
 
-Split the Dataset
-To split the dataset into training and testing sets, use split.py.
+## Model Training
+Refer to `model.ipynb` for details on the deep learning model architecture and training process.
 
-bash
-Copy code
-python split.py
-Real-Time Detection
-To run the real-time sign language detection, use detect.py.
+## Real-Time Detection
+Execute `detect.py` to perform real-time gesture detection using the trained models.
 
-bash
-Copy code
-python detect.py
-Web Application
-To deploy the web application using Streamlit, run app.py.
+## User Interface
+Launch the Streamlit app using `streamlit run app.py`. The web interface allows users to interact with the gesture recognition system.
 
-bash
-Copy code
-streamlit run app.py
-Project Structure
-perl
-Copy code
-sign-language-recognition/
-│
-├── models/
-│   ├── model1.h5
-│   ├── model2.h5
-│   └── ...
-│
-├── app.py
-├── collectdata.py
-├── detect.py
-├── model.ipynb
-├── split.py
-├── requirements.txt
-└── README.md
-models/: Contains the pre-trained model files in .h5 format.
-app.py: Streamlit-based UI code for deploying the web application.
-collectdata.py: Script to collect training data using webcam.
-detect.py: Script for real-time sign language detection.
-model.ipynb: Jupyter Notebook containing the deep learning model and training process.
-split.py: Script to split the dataset into training and testing sets.
-requirements.txt: List of dependencies required to run the project.
-README.md: Project documentation.
-Models
-The models folder contains various pre-trained models in .h5 format. You can use these models for prediction or further training.
+## Contributing
+Contributions are welcome! Please follow the contribution guidelines.
 
-License
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
-
-Acknowledgements
-This project was developed by Shivasai2004. Special thanks to the contributors and the open-source community for their support.
-
-For more information, visit the GitHub repository.
-
-css
-Copy code
-
-This README file provides a comprehensive overview of the project, instructions for installation and usage, a detailed project structure, and other relevant information.
-
-
-
-
+GitHub Repository
